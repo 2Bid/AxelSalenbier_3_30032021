@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto';
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header img {
+  max-width: 200px;
+  margin-top: 10px;
+}
+
+.img-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100vw;
+  height: 200px;
+}
+
+.main-section {
+  margin-top: -65px;
+}
+
+.entrees {
+  padding: 20px;
+}
+
+.entrees-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.entrees-item--description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.plat {
+  padding: 20px;
+}
+
+.plat-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.plat-item--description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dessert {
+  padding: 20px;
+}
+
+.dessert-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dessert-item--description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer {
+  background-color: #353535;
+  padding: 10px 30px;
+  color: #f1f1f1;
+}
+
+footer h5 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+}
+
+footer div h6 {
+  margin: 0 10px;
+  font-size: 0.9rem;
+}
+/*# sourceMappingURL=styles-menu.css.map */
