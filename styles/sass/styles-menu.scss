@@ -1,0 +1,276 @@
+$primaryColor : #9356DC;
+$subColor : #FF79DA;
+$color3 : #99E2D0;
+
+// logo + titre
+$font1 : 'Shrikhand';
+//texte
+$font2 : 'Roboto';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import  './_mixins.scss';     
+
+
+
+body{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Roboto'
+}
+header {
+     @include flex-center;
+     position: relative;
+     img{
+          max-width: 200px;
+          margin-top: 10px
+     }
+     i{
+          position: absolute;
+          left: 25px;
+          bottom: 30%;
+          font-size: 1.2rem;
+     }
+}
+.img-container{
+     z-index: -5;
+     position: relative;
+     img{
+          object-fit:cover ;
+          width: 100vw;
+          height: 330px;
+     }
+}
+
+.main-section{
+     margin-top: -65px;
+     background-color: rgb(241, 241, 241);
+     border-radius: 25px 25px 0 0;
+
+     .menu-header{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 90%;
+          h1{
+               padding: 20px;
+               font-weight: 800;
+               font-style: italic;
+          }
+          i{
+               font-size: 2rem;
+          }
+     }
+}
+
+.entrees{
+     padding: 20px;
+     h3{
+          position: relative;
+          margin-bottom: 30px;
+          text-transform: uppercase;
+          font-weight: 400;
+          font-size: 1.2rem;
+          letter-spacing: 1px;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column-reverse;
+     }
+     h3::after{
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          background-color: $color3;
+          height: 5px;
+          width: 50px;
+     }
+
+     &-item{
+          display: flex ;
+          flex-direction: column;
+          background-color: white;
+          box-shadow: -6px 6px 6px lightgray;
+          border-radius: 20px;
+          margin-bottom: 20px;
+          padding: 10px;
+          cursor: pointer;
+          position: relative;
+          z-index: 1;
+          
+          &-content{
+               z-index: 3;
+               position: relative
+               ;
+               @keyframes animation {
+                    0% { width: 98%;}
+                    100%{ width: 80%;}
+               }
+               &:hover{
+              
+                    animation: animation 0.5s ease-in-out forwards;
+               }
+          }
+
+          
+          
+          h4{
+               margin: 5px;
+               font-size: 1.2rem;
+          }
+
+          &--description{
+               display: flex ;
+               justify-content: space-between;
+               margin: 0;
+               padding: 0;
+
+               p{
+                    margin: 5px;
+                    font-size: 1.1rem;
+               }
+          }
+          .hover-effect{
+               width: 50px;
+               height: 100px;
+               background-color: greenyellow;
+          }
+     }
+     
+}
+.plat{
+     padding: 20px;
+
+     h3{
+          position: relative;
+          margin-bottom: 30px;
+          text-transform: uppercase;
+          font-weight: 400;
+          font-size: 1.2rem;
+          letter-spacing: 1px;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column-reverse;
+     }
+     h3::after{
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          background-color: $color3;
+          height: 5px;
+          width: 50px;
+     }
+     
+     &-item{
+          display: flex ;
+          flex-direction: column;
+          background-color: white;
+          box-shadow: -6px 6px 6px lightgray;
+          border-radius: 20px;
+          margin-bottom: 20px;
+          padding: 10px;
+          cursor: pointer;
+          
+          h4{
+               margin: 5px;
+          }
+
+          &--description{
+               display: flex ;
+               justify-content: space-between;
+               margin: 0;
+               padding: 0;
+
+               p{
+                    margin: 5px;
+               }
+          }
+     }
+}
+.dessert{
+     padding: 20px;
+
+     h3{
+          position: relative;
+          margin-bottom: 30px;
+          text-transform: uppercase;
+          font-weight: 400;
+          font-size: 1.2rem;
+          letter-spacing: 1px;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column-reverse;
+     }
+     h3::after{
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          background-color: $color3;
+          height: 5px;
+          width: 50px;
+     } 
+     
+     &-item{
+          display: flex ;
+          flex-direction: column;
+          background-color: white;
+          box-shadow: -6px 6px 6px lightgray;
+          border-radius: 20px;
+          margin-bottom: 20px;
+          padding: 10px;
+          cursor: pointer;
+
+          h4{
+               margin: 5px;
+          }
+
+          &--description{
+               display: flex ;
+               justify-content: space-between;
+               margin: 0;
+               padding: 0;
+
+               p{
+                    margin: 5px;
+               }
+          }
+     }
+}
+.btn-container{
+     display: flex;
+     justify-content: center;
+     button{
+          padding: 15px 20px;
+          margin: 30px;
+          color: rgb(240, 235, 235);
+          font-size: 0.9rem;
+          font-weight: 600;
+          box-shadow: -4px 6px 7px lightgray;
+          border: none;
+          border-radius: 40px;
+          background: linear-gradient($subColor,$primaryColor);
+          cursor: pointer
+     }
+}
+
+// Footer 
+
+footer{
+     background-color: #353535;
+     padding: 10px 30px;
+     color: #f1f1f1;
+
+     h5{
+          font-size: 1.2rem;
+          margin: 10px 0;
+     }
+     div{
+          display: flex;
+          margin: 10px 0;
+
+          h6{
+               margin: 0 10px;
+               font-size: 0.9rem;
+          }
+     }
+}

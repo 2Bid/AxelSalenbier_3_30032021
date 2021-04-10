@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header img {
+  max-width: 200px;
+  margin: 20px 0 5px 0;
+}
+
+.lieu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebebeb;
+}
+.lieu i {
+  margin: 0 20px;
+}
+
+.reserve {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  padding: 20px;
+  text-align: center;
+}
+.reserve p {
+  margin: 0;
+  color: gray;
+  font-size: 1.1rem;
+}
+.reserve button {
+  padding: 15px 20px;
+  margin: 30px;
+  color: #f0ebeb;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: -4px 6px 7px lightgray;
+  border: none;
+  border-radius: 40px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  cursor: pointer;
+}
+
+.fonctionnement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 0 40px 0;
+}
+.fonctionnement h2 {
+  width: 90%;
+}
+.fonctionnement-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+  box-shadow: -6px 8px 8px #ededed;
+  border-radius: 40px;
+  width: 85%;
+  margin-bottom: 20px;
+  position: relative;
+}
+.fonctionnement-item span {
+  position: absolute;
+  left: -5px;
+  margin-top: auto;
+  background-color: #9356DC;
+  z-index: 5;
+  width: 19px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-radius: 50px;
+  overflow: visible;
+  padding: 5px;
+  color: white;
+}
+.fonctionnement-item div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.restaurants {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  padding-bottom: 50px;
+}
+.restaurants h2 {
+  width: 90%;
+  margin-top: 50px;
+  font-weight: 800;
+}
+
+.resto-item {
+  background-color: white;
+  box-shadow: -5px 5px 5px #e0e0e0;
+  border-radius: 20px 20px 20px 20px;
+  margin: 10px 0;
+  position: relative;
+}
+.resto-item span {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background-color: #76ffc6;
+  color: green;
+  padding: 5px 5px;
+}
+.resto-item--content {
+  padding: 13px;
+  position: relative;
+}
+.resto-item--content h3 {
+  margin: 0;
+}
+.resto-item--content p {
+  margin: 5px 0 0 0;
+}
+.resto-item--content i {
+  position: absolute;
+  right: 20px;
+  font-size: 1.5rem;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+.resto-item--content i:hover {
+  color: #9356DC;
+}
+
+.img-container {
+  width: 80%;
+}
+.img-container img {
+  width: 300px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+footer {
+  background-color: #353535;
+  padding: 10px 30px;
+  color: #f1f1f1;
+}
+footer h5 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+footer div {
+  display: flex;
+  margin: 10px 0;
+}
+footer div h6 {
+  margin: 0 10px;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 650px) {
+  .img-container {
+    width: 80%;
+  }
+  .img-container img {
+    width: 450px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+  }
+}
+@media (min-width: 1200px) {
+  .img-container {
+    width: 80%;
+  }
+  .img-container img {
+    width: 900px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
