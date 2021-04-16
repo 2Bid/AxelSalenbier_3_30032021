@@ -81,25 +81,11 @@ header i {
   box-shadow: -6px 6px 6px lightgray;
   border-radius: 20px;
   margin-bottom: 20px;
-  padding: 10px;
+  max-width: 800px;
   cursor: pointer;
   position: relative;
+  overflow-x: hidden;
   z-index: 1;
-}
-.entrees-item-content {
-  z-index: 3;
-  position: relative;
-}
-@keyframes animation {
-  0% {
-    width: 98%;
-  }
-  100% {
-    width: 80%;
-  }
-}
-.entrees-item-content:hover {
-  animation: animation 0.5s ease-in-out forwards;
 }
 .entrees-item h4 {
   margin: 5px;
@@ -107,18 +93,31 @@ header i {
 }
 .entrees-item--description {
   display: flex;
+  width: 99%;
   justify-content: space-between;
   margin: 0;
-  padding: 0;
+  padding: 5px;
+  transition: 0.3s ease-in-out;
+}
+.entrees-item--description:hover {
+  width: 89%;
+  animation: animIcone 0.3s ease-in-out forwards;
 }
 .entrees-item--description p {
-  margin: 5px;
   font-size: 1.1rem;
+  margin: 0 0 5px 5px;
 }
 .entrees-item .hover-effect {
-  width: 50px;
-  height: 100px;
-  background-color: greenyellow;
+  margin-right: -550px;
+  width: 10%;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.entrees-item .hover-effect i {
+  font-size: 1.4rem;
 }
 
 .plat {

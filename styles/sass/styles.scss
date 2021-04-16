@@ -65,17 +65,21 @@ header {
 .fonctionnement{
      @include flex-center;
      flex-direction: column;
-     margin: 0 0 40px 0;
+     margin: auto;
+     max-width: 2000px;
 
      h2{
           width: 90%;
+          font-weight: 800;
      }
      &-item{
           @include flex-center;
+          justify-content: start;
           background-color: rgb(247, 247, 247);
           box-shadow: -6px 8px 8px rgb(237, 237, 237);
           border-radius: 40px;
           width: 85%;
+          max-width: 300px;
           margin-bottom: 20px;
           position: relative;
 
@@ -95,19 +99,29 @@ header {
           }
 
           div{
-               display: flex;
-               align-items: center;
-               justify-content: space-between;
-               width: 70%
+               @include flex-center;
+               margin-left: 50px;
 
+               i{
+                    padding-right: 30px
+               }
           }
      }
 }
+
+.restaurant-container{
+     
+     background-color: rgb(247, 247, 247);
+}
 .restaurants{
      @include flex-center;
-     flex-direction: column;
-     background-color: rgb(247, 247, 247);
+     justify-content: space-around;
+     flex-wrap: wrap;
+     margin: auto;
+     max-width: 2000px;
+     
      padding-bottom: 50px;
+     
      h2{
           width: 90%;
           margin-top: 50px;
@@ -118,7 +132,7 @@ header {
      background-color: white;
      box-shadow: -5px 5px 5px rgb(224, 224, 224);
      border-radius: 20px 20px 20px 20px;
-     margin: 10px 0;
+     margin: 10px 15px;
      position: relative;
 
      span{
@@ -147,11 +161,18 @@ header {
                bottom: 0;
                display: flex;
                align-items: center;
+               
+               &:hover{
+                    color: blueviolet;
+               }
 
           }
-          i:hover{
-               color: $primaryColor;
+          svg{
 
+               &:hover{
+                    fill: blueviolet;
+                    stroke: blueviolet;
+               }
           }
      }
 }
