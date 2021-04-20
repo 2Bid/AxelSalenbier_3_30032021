@@ -36,6 +36,7 @@ header {
 .img-container{
      z-index: -5;
      position: relative;
+     overflow-x: hidden;
      img{
           object-fit:cover ;
           width: 100vw;
@@ -53,19 +54,187 @@ header {
           justify-content: space-between;
           align-items: center;
           width: 90%;
+          max-width: 900px;
+          position: relative;
+          margin: auto;
           h1{
-               padding: 20px;
+               padding: 20px 20px 20px 0;
                font-weight: 800;
                font-style: italic;
           }
-          i{
-               font-size: 2rem;
+          .icone{
+               @include coeur;
+               width: 30px;
+               height: 30px;
+               position: absolute;
+               right: 20px;
+               top: 35%;
+               transition: 0.2s ease-in-out;
+          }
+          .icone:hover{
+               @include coeur-plein;
+               width: 30px;
+               height: 30px;
+               position: absolute;
+               right: 20px;
+               top: 35%;
           }
      }
 }
 
 .entrees{
      padding: 20px;
+     max-width: 900px;
+     margin: auto;
+     h3{
+          position: relative;
+          margin-bottom: 30px;
+          text-transform: uppercase;
+          font-weight: 400;
+          font-size: 1.2rem;
+          letter-spacing: 1px;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column-reverse;
+     }
+     h3::after{
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          background-color: $color3;
+          height: 5px;
+          width: 50px;
+     }
+
+     &-item{
+          display: flex ;
+          margin: 20px auto;
+          background-color: white;
+          box-shadow: -6px 6px 6px lightgray;
+          border-radius: 20px;
+          max-width: 800px;
+          cursor: pointer;
+          position: relative;
+          overflow-x: hidden;
+          z-index: 1;
+          
+          
+          &--1{
+
+               animation: appear 0.4s 0.1s ease-in-out both ;
+
+               &:hover{
+                    @keyframes appear {
+                         0%{ transform: scaleY(0);}
+                         100%{transform: scaleY(1);}
+                    }
+               }
+                        
+          }
+          &--2{
+
+               animation: appear 0.4s 0.2s ease-in-out both ;
+
+               &:hover{
+                    @keyframes appear {
+                         0%{ transform: scaleY(0);}
+                         100%{transform: scaleY(1);}
+                    }
+               }
+                        
+          }
+          &--3{
+
+               animation: appear 0.4s 0.3s ease-in-out both ;
+
+               &:hover{
+                    @keyframes appear {
+                         0%{ transform: scaleY(0);}
+                         100%{transform: scaleY(1);}
+                    }
+               }
+                        
+          }
+
+
+          &:hover{
+               .entrees-item--description{
+                    width: 79%;
+               }
+               .fa-check-circle{
+                    transform: rotate(0deg);
+               }
+               h4{
+                    width: 90%;
+               }
+          } 
+          
+          h4{
+               margin: 5px;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               white-space: nowrap;
+               word-wrap: none;
+               width: 85%;
+               font-size: 1.2rem;
+               
+          }
+          &--description{
+               display: flex ;
+               width: 99%;
+               justify-content: space-between;
+               margin: 0;
+               padding: 5px;
+               transition: 0.3s ease-in-out;
+               position: relative;
+
+               &-content{
+                    width: 100% !important;
+
+                    &-txt{
+                         width: 75%;
+                         overflow:hidden;
+                         transition: 0.4s ease-in-out;
+                         text-overflow: ellipsis;
+                         white-space: nowrap;
+                         word-wrap: none;
+                         font-size: 1rem;
+                    }
+               }
+
+               p{
+                    font-size: 1.1rem;
+                    margin: 0 0 5px 5px;
+               }
+
+               .price{
+                    position: absolute;
+                    right: 25px;
+                    font-weight: 600;
+                    top: 40px;
+               }
+          }
+
+          .hover-effect{
+               margin-right: -550px;
+               width: 20%;
+               border-radius: 0 20px 20px 0;
+               background-color: $color3;
+               @include flex-center;
+
+               i{
+                    font-size: 1.6rem;
+                    transition: 0.4s ease-in-out;
+                    transform: rotate(-180deg);
+               }
+          }
+     }
+     
+}
+.plat{
+     padding: 20px;
+     max-width: 900px;
+     margin: auto;
      h3{
           position: relative;
           margin-bottom: 30px;
@@ -93,28 +262,72 @@ header {
           border-radius: 20px;
           margin-bottom: 20px;
           max-width: 800px;
+          margin: 20px  auto;
           cursor: pointer;
-          position: relative;
           overflow-x: hidden;
           z-index: 1;
           
-          // &-content{
-          //      z-index: 3;
-          //      display: flex;
-          //      width: 96%;
-          //      position: relative;
-          //      padding: 10px 50px 0 10px;
-          //      transition: 0.3s ease-in-out;
+          &--1{
 
-          //      &:hover{
-          //      }
-          // }
+               animation: appear 0.4s 0.4s ease-in-out both ;
 
-          
+               &:hover{
+                    @keyframes appear {
+                         0%{ transform: scaleY(0);}
+                         100%{transform: scaleY(1);}
+                    }
+               }
+                        
+          }
+          &--2{
+
+               animation: appear 0.4s 0.5s ease-in-out both ;
+
+               &:hover{
+                    @keyframes appear {
+                         0%{ transform: scaleY(0);}
+                         100%{transform: scaleY(1);}
+                    }
+               }
+                        
+          }
+          &--3{
+
+               animation: appear 0.4s 0.6s ease-in-out both ;
+
+               &:hover{
+                    @keyframes appear {
+                         0%{ transform: scaleY(0);}
+                         100%{transform: scaleY(1);}
+                    }
+               }
+                        
+          }
+
+          &:hover{
+               .plat-item--description{
+                    width: 79%;
+               }
+               .plat-item--description-content-txt{
+                    width: 69%;
+               }
+               .fa-check-circle{
+                    transform: rotate(0deg);
+               }
+               h4{
+                    width: 90%;
+               }
+          }          
           
           h4{
                margin: 5px;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               white-space: nowrap;
+               word-wrap: none;
+               width: 85%;
                font-size: 1.2rem;
+               
           }
           &--description{
                display: flex ;
@@ -123,82 +336,55 @@ header {
                margin: 0;
                padding: 5px;
                transition: 0.3s ease-in-out;
+               position: relative;
 
-               &:hover{
-                    width: 89%;
-                    animation: animIcone 0.3s ease-in-out forwards;
+               &-content{
+                    width: 100%;
+
+                    &-txt{
+                         width: 75%;
+                         overflow:hidden;
+                         transition: 0.4s ease-in-out;
+                         text-overflow: ellipsis;
+                         white-space: nowrap;
+                         word-wrap: none;
+                         font-size: 1rem;
+                    }
                }
 
                p{
-                    font-size: 1.1rem;
-                    margin:0 0 5px 5px;
+                    margin: 0 0 5px 5px;
+               }
+
+               .price{
+                    position: absolute;
+                    right: 25px;
+                    font-weight: 600;
+                    top: 40px;
                }
           }
+
           .hover-effect{
                margin-right: -550px;
-               width: 10%;
+               width: 20%;
                border-radius: 0 20px 20px 0;
                background-color: $color3;
                @include flex-center;
 
                i{
-                    font-size: 1.4rem;
+                    font-size: 1.6rem;
+                    transition: 0.4s ease-in-out;
+                    transform: rotate(-180deg);
                }
           }
      }
      
-}
-.plat{
-     padding: 20px;
-
-     h3{
-          position: relative;
-          margin-bottom: 30px;
-          text-transform: uppercase;
-          font-weight: 400;
-          font-size: 1.2rem;
-          letter-spacing: 1px;
-          display: flex;
-          justify-content: space-between;
-          flex-direction: column-reverse;
-     }
-     h3::after{
-          content: "";
-          position: absolute;
-          bottom: -10px;
-          background-color: $color3;
-          height: 5px;
-          width: 50px;
-     }
-     
-     &-item{
-          display: flex ;
-          flex-direction: column;
-          background-color: white;
-          box-shadow: -6px 6px 6px lightgray;
-          border-radius: 20px;
-          margin-bottom: 20px;
-          padding: 10px;
-          cursor: pointer;
-          
-          h4{
-               margin: 5px;
-          }
-
-          &--description{
-               display: flex ;
-               justify-content: space-between;
-               margin: 0;
-               padding: 0;
-
-               p{
-                    margin: 5px;
-               }
-          }
-     }
 }
 .dessert{
      padding: 20px;
+     max-width: 900px;
+     margin: auto;
+     transform: scale(1);
 
      h3{
           position: relative;
@@ -218,33 +404,132 @@ header {
           background-color: $color3;
           height: 5px;
           width: 50px;
-     } 
-     
+     }
+
      &-item{
           display: flex ;
-          flex-direction: column;
+          
           background-color: white;
           box-shadow: -6px 6px 6px lightgray;
           border-radius: 20px;
           margin-bottom: 20px;
-          padding: 10px;
+          max-width: 800px;
           cursor: pointer;
+          margin: 20px auto;
+          position: relative;
+          overflow-x: hidden;
+          transform: scaleY(1);
+          z-index: 1;
+         
+          &--1{
 
+               animation: appear 0.4s 0.7s ease-in-out both ;
+
+               &:hover{
+                    @keyframes appear {
+                         0%{ transform: scaleY(0);}
+                         100%{transform: scaleY(1);}
+                    }
+               }
+                        
+          }
+          &--2{
+
+               animation: appear 0.4s 0.8s ease-in-out both ;
+
+               &:hover{
+                    @keyframes appear {
+                         0%{ transform: scaleY(0);}
+                         100%{transform: scaleY(1);}
+                    }
+               }
+                        
+          }
+          &--3{
+
+               animation: appear 0.4s 0.9s ease-in-out both ;
+
+               &:hover{
+                    @keyframes appear {
+                         0%{ transform: scaleY(0);}
+                         100%{transform: scaleY(1);}
+                    }
+               }
+                        
+          }
+          &:hover{
+               .dessert-item--description{
+                    width: 79%;
+               }
+               .fa-check-circle{
+                    transform: rotate(0deg);
+               }
+               h4{
+                    width: 90%;
+               }
+          }          
+          
           h4{
                margin: 5px;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               white-space: nowrap;
+               word-wrap: none;
+               width: 85%;
+               font-size: 1.2rem;
+               
           }
-
           &--description{
                display: flex ;
+               width: 99%;
                justify-content: space-between;
                margin: 0;
-               padding: 0;
+               padding: 5px;
+               transition: 0.3s ease-in-out;
+               position: relative;
+
+               &-content{
+                    width: 100% !important;
+
+                    &-txt{
+                         width: 75%;
+                         overflow:hidden;
+                         transition: 0.4s ease-in-out;
+                         text-overflow: ellipsis;
+                         white-space: nowrap;
+                         word-wrap: none;
+                         font-size: 1rem;
+                    }
+               }
 
                p{
-                    margin: 5px;
+                    font-size: 1.1rem;
+                    margin: 0 0 5px 5px;
+               }
+
+               .price{
+                    position: absolute;
+                    right: 25px;
+                    font-weight: 600;
+                    top: 40px;
+               }
+          }
+
+          .hover-effect{
+               margin-right: -550px;
+               width: 20%;
+               border-radius: 0 20px 20px 0;
+               background-color: $color3;
+               @include flex-center;
+
+               i{
+                    font-size: 1.6rem;
+                    transition: 0.4s ease-in-out;
+                    transform: rotate(-180deg);
                }
           }
      }
+     
 }
 .btn-container{
      display: flex;
@@ -259,7 +544,13 @@ header {
           border: none;
           border-radius: 40px;
           background: linear-gradient($subColor,$primaryColor);
-          cursor: pointer
+          cursor: pointer;
+          transition: 0.3s ease-in-out;
+
+          &:hover{
+               transform:scale(1.1);
+               opacity: 0.9;
+          }
      }
 }
 

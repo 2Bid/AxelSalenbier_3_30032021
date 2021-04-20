@@ -37,7 +37,7 @@ header img {
   align-items: center;
   flex-direction: column;
   background-color: #f7f7f7;
-  padding: 20px;
+  padding: 20px 50px;
   text-align: center;
 }
 .reserve p {
@@ -56,6 +56,11 @@ header img {
   border-radius: 40px;
   background: linear-gradient(#FF79DA, #9356DC);
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.reserve button:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
 }
 
 .fonctionnement {
@@ -70,7 +75,16 @@ header img {
   width: 90%;
   font-weight: 800;
 }
-.fonctionnement-item {
+.fonctionnement-flex {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.fonctionnement-flex-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,10 +94,11 @@ header img {
   border-radius: 40px;
   width: 85%;
   max-width: 300px;
-  margin-bottom: 20px;
+  padding: 10px;
+  margin: 10px 20px;
   position: relative;
 }
-.fonctionnement-item span {
+.fonctionnement-flex-item span {
   position: absolute;
   left: -5px;
   margin-top: auto;
@@ -97,13 +112,17 @@ header img {
   padding: 5px;
   color: white;
 }
-.fonctionnement-item div {
+.fonctionnement-flex-item div {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 50px;
+  margin-left: 10%;
+  min-width: 70%;
 }
-.fonctionnement-item div i {
+.fonctionnement-flex-item div h5 {
+  margin: 10px 0;
+}
+.fonctionnement-flex-item div i {
   padding-right: 30px;
 }
 
@@ -133,14 +152,15 @@ header img {
   border-radius: 20px 20px 20px 20px;
   margin: 10px 15px;
   position: relative;
+  cursor: pointer;
 }
 .resto-item span {
   position: absolute;
   top: 5%;
   right: 5%;
-  background-color: #76ffc6;
-  color: green;
-  padding: 5px 5px;
+  background-color: #99E2D0;
+  color: #026d02;
+  padding: 5px 10px;
 }
 .resto-item--content {
   padding: 13px;
@@ -152,29 +172,32 @@ header img {
 .resto-item--content p {
   margin: 5px 0 0 0;
 }
-.resto-item--content i {
+.resto-item--content .icone {
+  background-image: url('data:image/svg+xml,<svg aria-hidden="true"  focusable="false" data-prefix="far" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path  d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path></svg>');
+  width: 30px;
+  height: 30px;
   position: absolute;
   right: 20px;
-  font-size: 1.5rem;
-  top: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
+  top: 25%;
+  transition: 0.2s ease-in-out;
 }
-.resto-item--content i:hover {
-  color: blueviolet;
+.resto-item--content .icone:hover {
+  background-image: url('data:image/svg+xml,<svg aria-hidden="true" fill="blueviolet" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path  d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>');
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 25%;
 }
 .resto-item--content svg:hover {
   fill: blueviolet;
   stroke: blueviolet;
 }
 
-.img-container {
-  width: 80%;
-}
 .img-container img {
-  width: 300px;
-  height: 180px;
+  width: 100%;
+  height: 30%;
+  max-height: 170px;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
@@ -213,10 +236,14 @@ footer div h6 {
     width: 80%;
   }
   .img-container img {
-    width: 900px;
-    height: 200px;
+    width: 600px;
+    height: 300px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
+  }
+
+  .fonctionnement-flex {
+    flex-direction: row;
   }
 }
 
