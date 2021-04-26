@@ -221,9 +221,10 @@ header {
                border-radius: 0 20px 20px 0;
                background-color: $color3;
                @include flex-center;
+               color: white;
 
                i{
-                    font-size: 1.6rem;
+                    font-size: 1.4rem;
                     transition: 0.4s ease-in-out;
                     transform: rotate(-180deg);
                }
@@ -369,10 +370,11 @@ header {
                width: 20%;
                border-radius: 0 20px 20px 0;
                background-color: $color3;
+               color: white;
                @include flex-center;
 
                i{
-                    font-size: 1.6rem;
+                    font-size: 1.4rem;
                     transition: 0.4s ease-in-out;
                     transform: rotate(-180deg);
                }
@@ -476,7 +478,7 @@ header {
                white-space: nowrap;
                word-wrap: none;
                width: 85%;
-               font-size: 1.2rem;
+               font-size: 1.1rem;
                
           }
           &--description{
@@ -498,12 +500,11 @@ header {
                          text-overflow: ellipsis;
                          white-space: nowrap;
                          word-wrap: none;
-                         font-size: 1rem;
                     }
                }
 
                p{
-                    font-size: 1.1rem;
+                    font-size: 1rem;
                     margin: 0 0 5px 5px;
                }
 
@@ -521,10 +522,12 @@ header {
                border-radius: 0 20px 20px 0;
                background-color: $color3;
                @include flex-center;
+               color: white;
 
                i{
-                    font-size: 1.6rem;
+                    font-size: 1.4rem;
                     transition: 0.4s ease-in-out;
+                    
                     transform: rotate(-180deg);
                }
           }
@@ -538,7 +541,7 @@ header {
           padding: 15px 20px;
           margin: 30px;
           color: rgb(240, 235, 235);
-          font-size: 0.9rem;
+          font-size: 1rem;
           font-weight: 600;
           box-shadow: -4px 6px 7px lightgray;
           border: none;
@@ -573,5 +576,12 @@ footer{
                margin: 0 10px;
                font-size: 0.9rem;
           }
+     }
+}
+
+@include minwidth(500px) {
+     .entrees-item .hover-effect i{
+          font-size: 1.6rem;
+         
      }
 }

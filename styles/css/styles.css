@@ -100,7 +100,7 @@ header img {
 }
 .fonctionnement-flex-item span {
   position: absolute;
-  left: -5px;
+  left: -10px;
   margin-top: auto;
   background-color: #9356DC;
   z-index: 5;
@@ -157,7 +157,7 @@ header img {
 .resto-item span {
   position: absolute;
   top: 5%;
-  right: 5%;
+  right: 3%;
   background-color: #99E2D0;
   color: #026d02;
   padding: 5px 10px;
@@ -209,15 +209,19 @@ footer {
 }
 footer h5 {
   font-size: 1.2rem;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 footer div {
   display: flex;
+  justify-content: flex-star;
   margin: 10px 0;
 }
 footer div h6 {
   margin: 0 10px;
   font-size: 0.9rem;
+}
+footer p {
+  margin: 5px 0;
 }
 
 @media (min-width: 650px) {
