@@ -9,6 +9,7 @@ $font2 : 'Roboto';
 
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import  './_mixins.scss';     
 
 
@@ -59,8 +60,10 @@ header {
           margin: auto;
           h1{
                padding: 20px 20px 20px 0;
-               font-weight: 800;
+               font-weight: 500;
+               font-size: 1.3rem;
                font-style: italic;
+               font-family: $font1
           }
           .icone{
                @include coeur;
@@ -561,12 +564,14 @@ header {
 
 footer{
      background-color: #353535;
-     padding: 10px 30px;
+     padding: 10px 30px 30px 30px;
      color: #f1f1f1;
 
      h5{
           font-size: 1.2rem;
-          margin: 10px 0;
+          margin: 25px 0;
+          font-family: $font1;
+          font-weight: 600;
      }
      div{
           display: flex;
@@ -577,11 +582,20 @@ footer{
                font-size: 0.9rem;
           }
      }
+     p{margin: 5px 0;}
 }
 
 @include minwidth(500px) {
+     .main-section{
+          .menu-header{
+               h1{
+                    font-size: 1.7rem;
+               }
+          }
+     }
      .entrees-item .hover-effect i{
           font-size: 1.6rem;
          
      }
+
 }
