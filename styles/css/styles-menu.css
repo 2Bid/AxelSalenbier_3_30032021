@@ -177,7 +177,6 @@ header i {
   transition: 0.4s ease-in-out;
   text-overflow: ellipsis;
   white-space: nowrap;
-  word-wrap: none;
   font-size: 1rem;
 }
 .entrees-item--description p {
