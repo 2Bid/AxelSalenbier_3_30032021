@@ -1,9 +1,75 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+.loader {
+  height: 100vh;
+  width: 98.5vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loader 3s;
+  opacity: 0;
+}
+.loader-content {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-top: #9356DC double 4px;
+  border-left: #9356DC double 4px;
+  border-right: #9356DC double 4px;
+  border-bottom: #9356DC double 4px;
+  animation: loaderspin 3s infinite;
+}
+.loader-content::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-top: #9356DC dashed 4px;
+  border-left: #9356DC dashed 4px;
+  border-right: #9356DC dashed 4px;
+  border-bottom: #9356DC dashed 4px;
+}
+
+@keyframes loader {
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loaderspin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.container-site {
+  opacity: 0;
+  overflow: hidden;
+  animation: appearsite 2s 3s forwards;
+}
+
+@keyframes appearsite {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  position: relative;
   font-family: "Roboto";
 }
 
