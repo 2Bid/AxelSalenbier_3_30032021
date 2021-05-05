@@ -14,7 +14,7 @@ $font2 : 'Roboto';
 
 .loader{
      height: 100vh;
-     width: 98.5vw;
+     width: 94.5vw;
      position: absolute;
      @include flex-center;
      animation: loader 3s;
@@ -46,6 +46,7 @@ $font2 : 'Roboto';
           }
      }
 }
+
 @keyframes loader {
      95%{opacity: 1;}
      100%{opacity: 0;}
@@ -69,7 +70,14 @@ body{
      padding: 0;
      box-sizing: border-box;
      position: relative;
-     font-family: 'Roboto'
+     font-family: 'Roboto';
+     animation: body 10s forwards
+}
+
+//desactive le scroll pendant le loader
+@keyframes body {
+     from{overflow: hidden;}
+     to{overflow: scroll;}
 }
 a{
      text-decoration: none;
@@ -101,7 +109,7 @@ header {
           color: gray;
           font-size: 1.1rem;
      }
-     button{
+     div{
           padding: 15px 20px;
           margin: 30px;
           
