@@ -18,5 +18,7 @@ Pour l'installation :
 
 Executé la commande ```npm run sass:watch```
 
-En mode production, executer la commande ``` npm run sass ```
+## Mode production ##
+
+Executé la commande ``` npm run sass ```
 
