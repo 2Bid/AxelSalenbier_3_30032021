@@ -1,20 +1,12 @@
-$primaryColor : #9356DC;
-$subColor : #FF79DA;
-$color3 : #99E2D0;
-
-// logo + titre
-$font1 : 'Shrikhand';
-//texte
-$font2 : 'Roboto';
-
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import './vars.scss';
 @import  './_mixins.scss';     
 
 .loader{
-     height: 100vh;
-     width: 94.5vw;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
      position: absolute;
      @include flex-center;
      animation: loader 3s;
@@ -24,10 +16,7 @@ $font2 : 'Roboto';
           width: 100px;
           height: 100px;
           border-radius: 50%;
-          border-top: #9356DC double 4px;
-          border-left: #9356DC double 4px ;
-          border-right: #9356DC double 4px;
-          border-bottom:#9356DC double 4px ;
+          border:  $primaryColor double 4px;
           animation: loaderspin 3s infinite;
 
           &::before{
@@ -39,16 +28,13 @@ $font2 : 'Roboto';
                left: 15px;
                right: 15px;
                bottom: 15px;
-               border-top: #9356DC dashed 4px;
-               border-left: #9356DC dashed 4px ;
-               border-right: #9356DC dashed 4px;
-               border-bottom:#9356DC dashed 4px ;
+               border: $primaryColor dashed 4px;
           }
      }
 }
 
 @keyframes loader {
-     95%{opacity: 1;}
+     94%{opacity: 1;}
      100%{opacity: 0;}
 }
 @keyframes loaderspin {
@@ -76,8 +62,8 @@ body{
 
 //desactive le scroll pendant le loader
 @keyframes body {
-     from{overflow: hidden;}
-     to{overflow: scroll;}
+     from{overflow: hidden;height: 100vh;}
+     to{overflow: scroll;height: auto;}
 }
 a{
      text-decoration: none;
@@ -92,7 +78,7 @@ header {
 }
 .lieu {
      @include flex-center;
-     background-color: rgb(235, 235, 235);
+     background-color: $lieuBg;
      i{
           margin: 0 20px
      }
@@ -100,7 +86,7 @@ header {
 .reserve{
      @include flex-center;
      flex-direction: column;
-     background-color: rgb(247, 247, 247);
+     background-color: $reserveBg;
      padding: 20px 50px;
      text-align: center;
 
@@ -112,7 +98,6 @@ header {
      div{
           padding: 15px 20px;
           margin: 30px;
-          
           font-size: 0.9rem;
           font-weight: 600;
           box-shadow: -4px 6px 7px lightgray;
@@ -129,7 +114,7 @@ header {
           }
 
           a{
-               color: rgb(240, 235, 235);
+               color: $whiteColor;
           }
      }
 }
@@ -154,8 +139,8 @@ header {
           &-item{
                @include flex-center;
                justify-content: start;
-               background-color: rgb(247, 247, 247);
-               box-shadow: -6px 8px 8px rgb(237, 237, 237);
+               background-color: $reserveBg;
+               box-shadow: -6px 8px 8px $lieuBg;
                border-radius: 40px;
                width: 85%;
                max-width: 300px;
@@ -200,7 +185,7 @@ header {
 
 .restaurant-container{
      
-     background-color: rgb(247, 247, 247);
+     background-color: $reserveBg;
 }
 .restaurants{
      @include flex-center;
@@ -218,7 +203,7 @@ header {
 }
 .resto-item{
      background-color: white;
-     box-shadow: -5px 5px 5px rgb(224, 224, 224);
+     box-shadow: -5px 5px 5px $lieuBg;
      border-radius: 20px 20px 20px 20px;
      margin: 10px 15px;
      position: relative;
@@ -229,7 +214,7 @@ header {
           top: 5%;
           right: 3%;
           background-color: $color3;
-          color: rgb(2, 109, 2);
+          color: $greenColor;
           padding: 5px 10px;
      }
 
@@ -254,19 +239,6 @@ header {
           }
           .icone:hover{
                @include coeur-plein;
-               width: 30px;
-               height: 30px;
-               position: absolute;
-               right: 20px;
-               top: 25%;
-          }
-          
-          svg{
-
-               &:hover{
-                    fill: blueviolet;
-                    stroke: blueviolet;
-               }
           }
      }
 }
@@ -282,9 +254,9 @@ header {
 }    
 
 footer{
-     background-color: #353535;
+     background-color: $footerBg;
      padding: 10px 30px 30px 30px;
-     color: #f1f1f1;
+     color: $whiteColor;
      
      h5{
           font-size: 1.2rem;

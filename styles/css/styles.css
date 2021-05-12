@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 .loader {
-  height: 100vh;
-  width: 94.5vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   position: absolute;
   display: flex;
   justify-content: center;
@@ -14,10 +15,7 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border-top: #9356DC double 4px;
-  border-left: #9356DC double 4px;
-  border-right: #9356DC double 4px;
-  border-bottom: #9356DC double 4px;
+  border: #9356DC double 4px;
   animation: loaderspin 3s infinite;
 }
 .loader-content::before {
@@ -29,14 +27,11 @@
   left: 15px;
   right: 15px;
   bottom: 15px;
-  border-top: #9356DC dashed 4px;
-  border-left: #9356DC dashed 4px;
-  border-right: #9356DC dashed 4px;
-  border-bottom: #9356DC dashed 4px;
+  border: #9356DC dashed 4px;
 }
 
 @keyframes loader {
-  95% {
+  0% {
     opacity: 1;
   }
   100% {
@@ -77,9 +72,11 @@ body {
 @keyframes body {
   from {
     overflow: hidden;
+    height: 100vh;
   }
   to {
     overflow: scroll;
+    height: auto;
   }
 }
 a {
@@ -139,7 +136,7 @@ header img {
   box-shadow: -5px 7px 7px gray;
 }
 .reserve div a {
-  color: #f0ebeb;
+  color: #f1f1f1;
 }
 
 .fonctionnement {
@@ -169,7 +166,7 @@ header img {
   align-items: center;
   justify-content: start;
   background-color: #f7f7f7;
-  box-shadow: -6px 8px 8px #ededed;
+  box-shadow: -6px 8px 8px #ebebeb;
   border-radius: 40px;
   width: 85%;
   max-width: 300px;
@@ -229,7 +226,7 @@ header img {
 
 .resto-item {
   background-color: white;
-  box-shadow: -5px 5px 5px #e0e0e0;
+  box-shadow: -5px 5px 5px #ebebeb;
   border-radius: 20px 20px 20px 20px;
   margin: 10px 15px;
   position: relative;
@@ -264,15 +261,6 @@ header img {
 }
 .resto-item--content .icone:hover {
   background-image: url('data:image/svg+xml,<svg aria-hidden="true" fill="blueviolet" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path  d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>');
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  right: 20px;
-  top: 25%;
-}
-.resto-item--content svg:hover {
-  fill: blueviolet;
-  stroke: blueviolet;
 }
 
 .img-container img {

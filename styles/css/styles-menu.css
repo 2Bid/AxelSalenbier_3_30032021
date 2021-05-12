@@ -37,7 +37,7 @@ header i {
 
 .main-section {
   margin-top: -65px;
-  background-color: #f1f1f1;
+  background-color: #f7f7f7;
   border-radius: 25px 25px 0 0;
 }
 .main-section .menu-header {
@@ -478,7 +478,7 @@ header i {
 .btn-container button {
   padding: 15px 20px;
   margin: 30px;
-  color: #f0ebeb;
+  color: #ebebeb;
   font-size: 1rem;
   font-weight: 600;
   box-shadow: -4px 6px 7px lightgray;
